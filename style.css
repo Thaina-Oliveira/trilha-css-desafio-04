@@ -1,0 +1,210 @@
+:root {
+    --primary: rgba(255, 255, 255, 1);
+    --secondary: rgba(35, 39, 42, 1);
+    --tertiary:
+    --quartenary:
+}
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+.btn {
+    background: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.6);
+    display: block;
+    width: 300px;
+    height: 40px;
+    margin: 10px auto;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+#btn-1 {
+    background-color:  var(--primary);
+    border: 1px solid var(--primary);
+    color: rgba(35, 39, 42, 1);
+}
+#btn-1:hover {
+    background-color:  var(--primary);
+    border: 1px solid var(--primary);
+    color: rgb(27, 90, 172);
+}
+#btn-2 {
+    background-color:  var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--primary);
+}
+#btn-2:hover {
+    background-color:  rgba(45, 47, 49, 0.911);
+    border: 1px solid rgba(45, 47, 49, 0.911);
+    color: var(--primary);
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: 900;
+   font-family: 'Luckiest Guy', cursive;
+   text-align: center;
+   padding: 15px 0;
+   letter-spacing: 0.1em;
+}
+#header-description{
+    color: var(--primary);
+}
+h1 {
+    color: var(--primary);
+}
+.subtitle {
+    font-size: 1.5em;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 1;
+    padding-bottom: 15px;
+    margin: 0 10px;
+}
+h2 {
+    color: var(--secondary); 
+}
+.section-description {
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1;
+    text-wrap: wrap;
+    margin: 0 15px;
+    padding-bottom: 10px;
+}
+#header-description {
+    text-align: center;
+}
+.header {
+    background: url(./img/Header\ Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 20px;
+}
+.section-img{
+    max-width: 100%;
+    margin: 15px auto;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: ". img img img img . "
+    "description description description  description  description description ";
+    justify-content: center;  
+}
+.section-2{
+    background-color: rgba(246, 246, 246, 1);
+    padding-bottom: 10px;
+}
+
+.subsection-image {
+    grid-area: img;
+}
+.subsection-text {
+    grid-area: description;
+}
+.section-4{
+    background-color: rgba(246, 246, 246, 1);
+    padding-bottom: 10px;
+}
+.section-img-4{
+    display: flex;
+    justify-content: center;
+}
+.section-img-4 img{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.footer-container {
+    background-color: var(--secondary);
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.footer-container .footer-img{
+    max-width: 30%;
+    margin: 15px auto;
+}
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 20px;
+    }
+    .header {
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        background-position: center;
+        padding-top: 0;
+    }
+    .header-container {
+        height: 50%;
+        width: 50%;
+        justify-self: center;
+        align-self: center;
+    }
+    .buttons {
+        display: flex;
+        gap: 10px;
+        margin: 15px auto 0 auto;
+        
+     }
+    .btn {
+        display: inline-block;
+        text-align: center;
+        text-wrap: wrap;
+        margin: 0 auto;
+        height: 45px;
+    }
+    .title {
+        font-size: 2.4em;
+        text-align: center;
+    }
+    .subtitle {
+        font-size: 1.8em;
+    }
+    .section-description {
+        font-size: 1.2em;
+    }
+    .subsection-image {
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+    .subsection-text {
+        grid-column: 4/6;
+        grid-row: 1;
+        justify-self: center;
+        align-self: center;
+        column-gap: 10px;
+    }
+    .subsection-image-2 {
+        grid-column: 4/6;
+        grid-row: 1;
+    }
+    .subsection-text-2{
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+    .section-img-4{
+        display: flex;
+        justify-content: center;
+    }
+    .section-img-4 img{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .section-4-description {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
